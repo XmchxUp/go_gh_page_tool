@@ -111,7 +111,7 @@ func main() {
 		return
 	}
 
-	cmd = exec.Command("git", "push")
+	cmd = exec.Command("git", "push", "-f", "origin", *branchName)
 	cmd.Dir = tmpDirPath
 	err = cmd.Run()
 	if err != nil {
